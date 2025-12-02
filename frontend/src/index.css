@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Indie + Spotify-dark custom tokens */
+:root{
+  --accent:#1db954; /* spotify green */
+  --indie-pink:#d977a6;
+  --bg-dark:#0f1724;
+  --card:#0b1220;
+  --muted:#94a3b8;
+}
+
+html,body,#root{height:100%}
+body{
+  @apply bg-gradient-to-br from-[#071025] via-[#091025] to-[#0f1724] text-gray-100;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* nav button */
+.nav-btn{
+  @apply inline-flex items-center space-x-2 px-3 py-2 rounded-xl text-sm font-medium transition;
+}
+.active-nav{
+  background: linear-gradient(90deg, rgba(29,185,84,0.12), rgba(217,119,166,0.06));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* glass card */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 16px;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+/* input */
+.input {
+  @apply w-full px-4 py-3 rounded-xl bg-[#071428] border border-[#0e2736] placeholder:text-[#6b7280] text-sm;
+}
+
+/* primary button */
+.btn-primary{
+  @apply px-4 py-3 rounded-xl text-white bg-gradient-to-r from-[var(--accent)] to-[var(--indie-pink)] font-semibold shadow;
+}
+
+/* secondary */
+.btn-ghost{
+  @apply px-4 py-2 rounded-lg border border-[#1f2940] text-sm text-[#cbd5e1];
+}
